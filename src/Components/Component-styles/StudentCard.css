@@ -1,0 +1,49 @@
+.student-card {
+  background-color: rgb(63, 63, 63);
+  width: 210px;
+  height: 230px;
+  padding: 0 0 20px;
+  margin: 20px;
+  border-radius: 8px;
+  border: 1px silver solid;
+  box-shadow: 5px 3px 10px rgb(0, 0, 0);
+  transition: all 0.3s;
+}
+
+.student-card:hover {
+  transform: scale(1.12);
+  box-shadow: 10px 8px 20px rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+.student-name {
+  height: 30px;
+  padding: 5px;
+  background-color: black;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.fa-user.fun {
+  color: rgb(160, 228, 152);;
+}
+
+.fa-user.be {
+  color: rgb(125, 182, 203);;
+}
+
+.fa-user.fe {
+  color: rgb(188, 140, 205);;
+}
+
+.fa-user.proj {
+  color: rgb(179, 139, 80);;
+}
+
+.fa-user.grad {
+  color: rgb(120, 120, 26);;
+}
+
+

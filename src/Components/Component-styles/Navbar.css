@@ -1,0 +1,14 @@
+.navbar-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-bottom: 1px white solid;
+}
+
+a {
+  text-decoration: none;
+  margin: 10px;
+  color: yellow;
+  font-weight: bold;
+}

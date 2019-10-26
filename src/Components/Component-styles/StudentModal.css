@@ -1,0 +1,31 @@
+.student-progress {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.block {
+  width: 40px;
+  height: 50px;
+  padding: 3px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.block.fun {
+  background-color: rgb(160, 228, 152);;
+}
+
+.block.be {
+  background-color: rgb(125, 182, 203);;
+}
+
+.block.fe {
+  background-color: rgb(188, 140, 205);;
+}
+
+.block.proj {
+  background-color: rgb(179, 139, 80);;
+}

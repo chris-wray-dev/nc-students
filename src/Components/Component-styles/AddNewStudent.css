@@ -1,0 +1,55 @@
+.add-student-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add-student-icon {
+  color: rgb(160, 228, 152);
+  margin: 20px;
+}
+
+.add-student-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add-student-form label {
+  font-weight: bold;
+  margin: 10px;
+}
+
+.add-student-form input {
+  margin: 10px;
+  height: 25px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.add-student-form #name {
+  width: 250px;
+}
+
+.add-student-form #startingCohort {
+  width: 40px;
+}
+
+.add-user-button {
+  margin: 20px;
+  background-color: rgb(160, 228, 152);
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 0.3s;
+  color: #282c34;
+}
+
+.add-user-button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.add-user-button.fa-user-plus {
+  color: #282c34;
+}

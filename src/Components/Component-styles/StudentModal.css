@@ -4,35 +4,74 @@
   align-items: center;
 }
 
-.student-progress {
+hr {
+  width: 85%;
+}
+
+.button-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  border-radius: 8px;
+  padding: 20px;
 }
 
-.block {
-  width: 45px;
-  height: 50px;
-  padding: 3px;
-  border-radius: 8px;
-  text-align: center;
-  font-weight: bold;
+#graduate-button.fun, #resit-button.fun {
+  background-color: rgb(160, 228, 152);
 }
 
-.block.fun {
-  background-color: rgb(160, 228, 152);;
-}
-
-.block.be {
+#graduate-button.be, #resit-button.be {
   background-color: rgb(125, 182, 203);;
 }
 
-.block.fe {
+#graduate-button.fe, #resit-button.fe {
   background-color: rgb(188, 140, 205);;
 }
 
-.block.proj {
+#graduate-button.proj, #resit-button.proj {
   background-color: rgb(179, 139, 80);;
+}
+
+#graduate-button {
+  margin: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 0.3s;
+  color: black;
+}
+
+#graduate-button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+#resit-button {
+  margin: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 0.3s;
+  color: black;
+}
+
+#resit-button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+#delete-button {
+  margin: 20px;
+  background-color: rgb(177, 78, 78);
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 0.3s;
+  color: #282c34;
+}
+
+#delete-button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.fa-user-graduate, .fa-user-times, .fa-undo {
+  margin: 5px;
 }

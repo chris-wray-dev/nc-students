@@ -1,0 +1,45 @@
+.blocks-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.block-button {
+  margin: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 0.3s;
+  color: #282c34;
+}
+
+.block-button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.block-button.fundamentals {
+  background-color: rgb(160, 228, 152);
+}
+
+.block-button.back-end {
+  background-color: rgb(125, 182, 203);
+}
+
+.block-button.front-end {
+  background-color: rgb(188, 140, 205);
+}
+
+.block-button.project {
+  background-color: rgb(179, 139, 80);
+}
+
+.block-button.all {
+  background-image: linear-gradient(to right, rgb(160, 228, 152) , rgb(125, 182, 203), rgb(188, 140, 205), rgb(179, 139, 80));
+}

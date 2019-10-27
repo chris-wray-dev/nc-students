@@ -22,6 +22,20 @@ export const getStudentById = (student_id) => {
     })
 }
 
+export const getStudentsByBlock = (block) => {
+  let url = '';
+  block 
+    ? url = `${BASE_URL}/students?block=${block}&graduated=false`
+    : url = `${BASE_URL}/students?graduated=false`;
+  return axios.get(url)
+  .then(response => {
+    return response.data;
+  })
+  .catch(err => {
+    console.log(err);
+  })
+}
+
 export const getAllBlocks = () => {
   return axios.get(`${BASE_URL}/blocks`)
     .then(response => {
@@ -39,4 +53,20 @@ export const postNewStudent = (student) => {
       return response.data;
     })
     .catch(err => console.log(err))
+}
+
+export const patchStudentBlock = (student_id, graduated) => {
+  return axios.patch(`${BASE_URL}/students/${student_id}?progress=${graduated}`)
+    .then(response => {
+      return response.data;
+    })
+    .catch(err => console.log(err));
+}
+
+export const deleteStudentById = (student_id) => {
+  return axios.delete(`${BASE_URL}/students/${student_id}`)
+    .then(response => {
+      return response.data;
+    })
+    .catch(err => console.log(err));
 }

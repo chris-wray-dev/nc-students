@@ -3,10 +3,10 @@ import './Component-styles/StudentCard.css'
 
 const blocks = {
   fun: 'Fundamentals',
-  be: 'Back-end',
-  fe: 'Front-end',
-  proj: 'Project',
-  grad: 'Graduate'
+  be: 'Back End',
+  fe: 'Front End',
+  proj: 'Project Phase',
+  grad: 'Graduated'
 }
 
 const StudentCard = ({ student, openModal }) => {

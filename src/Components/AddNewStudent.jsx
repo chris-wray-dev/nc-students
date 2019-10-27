@@ -1,4 +1,5 @@
 import React from 'react';
+import './Component-styles/AddNewStudent.css'
 
 class AddNewStudent extends React.Component {
   state = {
@@ -19,6 +20,8 @@ class AddNewStudent extends React.Component {
     return (
       <div className="add-student-container">
         <h2>Add New Student</h2>
+        <i className="add-student-icon fas fa-5x fa-user-plus"></i>
+        <hr/>
         <form className="add-student-form" onSubmit={this.handleSubmit}>
           <label htmlFor="studentName">
             Student Name : 
@@ -28,7 +31,11 @@ class AddNewStudent extends React.Component {
             Starting Cohort : 
             <input id="startingCohort" onChange={ this.handleChange } type="number"/>
           </label>
-          <button type="submit">Add Student</button>
+          <h3 onClick={ this.handleSubmit } className="add-user-button" >
+            <i className="fas fa-2x fa-user-plus" />
+            Add student...
+          </h3>
+            
         </form>
       </div>
     )

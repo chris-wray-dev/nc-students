@@ -11,7 +11,7 @@
 }
 
 .student-card:hover {
-  transform: scale(1.12);
+  transform: scale(1.08);
   box-shadow: 10px 8px 20px rgb(0, 0, 0);
   cursor: pointer;
 }

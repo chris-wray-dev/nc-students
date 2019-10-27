@@ -1,10 +1,29 @@
 import React from 'react';
 import './Component-styles/StudentModal.css'
 
-const StudentModal = ( { student } ) => {
+const blocks = [
+  'Fundamentals',
+  'Back-end',
+  'Front-end',
+  'Project',
+  'Graduate'
+]
+
+const StudentModal = ( { student, currentBlock } ) => {
+
+  const handleClick = (event) => {
+
+    if (event.target.id === 'graduate-button') {
+      console.log(blocks[blocks.indexOf(currentBlock) + 1]);
+    }
+    
+  }
+
   return (
     <div className="student-details-container">
-      <p> { student.name }</p>
+      <h3> { student.name }</h3>
+      <h4> { currentBlock } </h4>
+      
       <div className="student-progress">
         { student.blockHistory.map((block, index) => {
             return block.slug !== 'grad' 
@@ -13,8 +32,9 @@ const StudentModal = ( { student } ) => {
               : (null)
         })}
       </div>
-      <button>Graduate</button>
-      <button>Delete</button>
+
+      <button id="graduate-button" onClick={handleClick} >Graduate</button>
+      <button onClick={handleClick} >Delete</button>
     </div>
   )
 }

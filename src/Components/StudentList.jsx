@@ -32,16 +32,17 @@ class StudentList extends React.Component {
         isLoading: true,
         modalIsOpen: false,
         modalStudent: {},
+        currentBlock: '',
         addNewStudent: false
       }
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
   }
 
-  openModal(student_id) {
+  openModal(student_id, currentBlock) {
     getStudentById(student_id)
       .then(({ student }) => {
-        this.setState({ modalIsOpen: true, modalStudent: student })
+        this.setState({ modalIsOpen: true, addNewStudent: false, modalStudent: student, currentBlock: currentBlock })
       })
   }
 
@@ -83,11 +84,38 @@ class StudentList extends React.Component {
       <div className="student-list">
         <h2>Student List</h2>
         <div className="student-list-options">
-          <i className="fas fa-2x fa-user-plus" onClick={ this.openAddStudentModal }/>
-          <i className="fas fa-2x fa-sort-numeric-up" onClick={ () => this.sortStudents('startingCohort', 'asc') }/>
-          <i className="fas fa-2x fa-sort-numeric-down" onClick={ () => this.sortStudents('startingCohort', 'desc') }/>
-          <i className="fas fa-2x fa-sort-alpha-up" onClick={ () => this.sortStudents('name', 'asc') }/>
-          <i className="fas fa-2x fa-sort-alpha-down" onClick={ () => this.sortStudents('name', 'desc') }/>
+
+          <div className="add-new-student">
+            <p onClick={ this.openAddStudentModal }>
+              <i className="fas fa-user-plus" />
+                : add new student
+              </p>
+          </div>
+
+          <div className="sort-by-cohort">
+            <p onClick={ () => this.sortStudents('startingCohort', 'asc') }> 
+              <i className="fas fa-sort-numeric-down" />
+                : sort by cohort ascending
+            </p>
+
+            <p onClick={ () => this.sortStudents('startingCohort', 'desc') }>   
+              <i className="fas fa-sort-numeric-up" />
+                : sort by cohort descending
+            </p>
+          </div>
+
+          <div className="sort-by-name">
+            <p onClick={ () => this.sortStudents('name', 'asc') }> 
+              <i className="fas fa-sort-alpha-down" />
+                : sort by name ascending
+            </p>
+
+            <p onClick={ () => this.sortStudents('name', 'desc') }> 
+              <i className="fas fa-sort-alpha-up" />
+                : sort by name descending
+            </p>
+          </div>
+
         </div>
         <div className="student-list-container">
           { this.state.isLoading ? <p>loading...</p> : this.state.students.map(student => {
@@ -105,7 +133,7 @@ class StudentList extends React.Component {
 
           { this.state.addNewStudent 
             ? <AddNewStudent addNewStudent={ this.addNewStudent }/>
-            : <StudentModal student={ this.state.modalStudent }/> }
+            : <StudentModal student={ this.state.modalStudent } currentBlock={ this.state.currentBlock }/> }
 
         </Modal>
       </div>

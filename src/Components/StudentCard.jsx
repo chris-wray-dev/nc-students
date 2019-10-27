@@ -12,7 +12,7 @@ const blocks = {
 const StudentCard = ({ student, openModal }) => {
 
   const handleClick = () => {
-    openModal(student._id);
+    openModal(student._id, blocks[student.currentBlock]);
   }
 
   return (
@@ -20,7 +20,7 @@ const StudentCard = ({ student, openModal }) => {
       <div className={`student-name `}>{ student.name } </div>
       <i className={`fas fa-6x fa-user ${student.currentBlock}`}></i>
       <p>{ blocks[student.currentBlock] }</p>
-      <p>Cohort : { student.startingCohort }</p> 
+      <p>Starting Cohort : { student.startingCohort }</p> 
     </div>
   )
   

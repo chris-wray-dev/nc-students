@@ -11,3 +11,33 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+
+.student-list-options {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.add-new-student, .sort-by-cohort, .sort-by-name {
+  display: flex;
+  flex-direction: row;
+}
+
+.student-list-options p {
+  margin: 0 8px 10px;
+  padding: 4px;
+  border-radius: 5px;
+  background-color: rgb(78, 84, 157);
+  transition: all 0.3s;
+}
+
+.student-list-options p:hover {
+  transform: scale(1.1);
+  background-color: rgb(112, 122, 227);
+  cursor: pointer;
+}
+
+i {
+  padding-right: 3px;
+}
